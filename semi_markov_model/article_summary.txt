@@ -1,0 +1,43 @@
+Introduction
+
+2 catégories de modélisation des actifs tick by tick:
+	1- macro-to-micro: 
+Prix observé = Noisy representation of unobserved price (e.g, semi martingale). 
+Ici result exist on a robust estimation of the realized volatility.
+problèmes: pas fou pour HFT
+	2- micro to macro:
+point processes (Hawkes processes)
+focus on observable quantity
+
+microstructure noise: HFT returns are anticorrelated, leading toa short term mean reversion effect
+volatility cklustering: market alternates, independently of the intraday seasonaluty, between phases of high and low activity.
+
+At large scale, price process ~ diffusion behavior
+
+paper AIM: provide a tractable model of tick by ticj asset price for liquid asset
+constant bid ask spread
+
+Start: model free description of the piecewise constant mid price
+(Tn, Jn)n 
+Tn = jump times of the asset price associated to a counted process Nt
+Jn = price incréments.
+
+MRP = Markov RENEWAL pROCESS
+
+nT + MODELS THE VOLATILITY CLUSTERING
+
+mrp SEMI MARKOV PROPERTY: price process can be Embedded into a markov system with a few additional variabvles.
+
+Section 2 = description of the MRP model + statistical estimation
+Section 3: diffusive limit of the asset price at macrospocpic scale
+Section 4: derive analytical formula for the mean signature plot
+ and compare with real data.
+Section 5;: conclusion + extension
+
+Section 2:
+means of a marked point process (Tn, Jn) = tick by tick fluctuation of a univariate stock price
+Tn = sequence of jump times of the asset price
+Jn = marks sequence calued in the finite set E ={+1, -1, … , +m, -m} C Z*
+= price incréments
+
+continous time price proces: Pt = P0 + sum(n=1 to Nt)(Jn), t>= 0
