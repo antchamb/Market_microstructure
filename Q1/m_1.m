@@ -46,4 +46,4 @@ title('Simulation of P_t')
 xlabel('time');
 ylabel('Pt')
 
-% Pt = P0 + sum(Jn[:compute_Nt(t,Tn)]);
+
