@@ -46,7 +46,6 @@ function [Pt] = get_Pt(t_values, Tn, Jn, P0)
     end
 end
 
-
 % Parameters:
 P0 = 10;
 T = 3600;
@@ -55,7 +54,7 @@ t_values = 1:T;
 
 Sn_1 = S_sim(1000, 660, Nmc);
 Tn_1 = cumsum(Sn_1, 1);
-% Tn_1 = Tn_1(Tn_1 < T);
+Tn_1 = Tn_1(Tn_1 < T);
 Nt_1 = compute_Nt(t_values, Tn_1);
 Jn_1 = get_Jn_m3(Tn_1);
 Pt_1 = get_Pt(t_values, Tn_1, Jn_1, P0);
@@ -83,12 +82,4 @@ ylim([0, 20]);
 % 
 % [h, pValue] = adftest(Pt(:,1));
 % disp(['Stationnarité: ', num2str(h), ', p-value: ', num2str(pValue)]);
-
-min_Pt = min(Pt, [], 1);
-
-Proba_Pt = length(min_Pt(min_Pt <= 0)) / length(min_Pt);
-disp('Proba_Pt <= 0');
-disp(Proba_Pt);
-
-
 
