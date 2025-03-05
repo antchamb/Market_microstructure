@@ -59,7 +59,7 @@ Nmc = 1000;
 
 
 Sn_1 = S_sim(n, Nmc, 1/660);
-Pt_1 = get_Pt_1(Sn_1, t_values, E_3, p_3, P0/2);
+Pt_1 = get_Pt_1(Sn_1, t_values, E_1, p_1, P0/2);
 
 Sn_2 = S_sim(n, Nmc, 1/110);
 Pt_2 = get_Pt_2(Sn_2, t_values, P0/2);
